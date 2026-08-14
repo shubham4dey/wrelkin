@@ -205,7 +205,7 @@ export default function Contact() {
           CONTACT HERO
       ===================================================== */}
 
-      <section className="relative overflow-hidden bg-white pt-8 transition-colors duration-500 dark:bg-[#031009] sm:pt-12 lg:pt-16">
+      <section className="relative overflow-hidden bg-white pt-12 transition-colors duration-500 dark:bg-[#031009] sm:pt-16 lg:pt-16">
         {/* Background */}
 
         <div className="pointer-events-none absolute inset-0">
@@ -272,7 +272,7 @@ export default function Contact() {
                 <span>Contact WRELKIN</span>
               </div>
 
-              <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-gray-950 transition-colors duration-500 dark:text-white sm:text-6xl lg:text-[4.7rem]">
+              <h1 className="mt-6 max-w-3xl text-[2.6rem] font-semibold leading-[1.05] tracking-[-0.05em] text-gray-950 transition-colors duration-500 dark:text-white sm:text-6xl sm:leading-[0.98] lg:text-[4.7rem]">
                 Let's build a{" "}
                 <span className="text-green-600 dark:text-green-400">
                   cleaner energy
@@ -311,8 +311,8 @@ export default function Contact() {
             </motion.div>
 
             {/* =====================================================
-                RIGHT CARD — REDESIGNED (LIGHT + DARK)
-            ====================================================== */}
+    RIGHT CARD — REDESIGNED (MOBILE FIXED)
+===================================================== */}
 
             <motion.div
               initial={{
@@ -329,18 +329,16 @@ export default function Contact() {
                 duration: 0.9,
                 delay: 0.1,
               }}
-              className="relative w-full"
+              className="relative w-full min-w-0 px-1.5 sm:px-0"
             >
-              <div className="relative mx-auto w-full max-w-[480px]">
+              <div className="relative mx-auto w-full max-w-[460px] sm:max-w-[540px] lg:max-w-[480px]">
+                {/* OUTER SOFT GLOW (mobile pe chhota taaki edge tak na jaaye) */}
 
-                {/* OUTER SOFT GLOW */}
-
-                <div className="absolute -inset-5 rounded-[3rem] bg-gradient-to-br from-green-200/60 via-emerald-100/50 to-lime-200/60 blur-2xl dark:from-green-500/10 dark:via-transparent dark:to-lime-400/10" />
+                <div className="absolute -inset-3 rounded-[3rem] bg-gradient-to-br from-green-200/60 via-emerald-100/50 to-lime-200/60 blur-2xl dark:from-green-500/10 dark:via-transparent dark:to-lime-400/10 sm:-inset-5" />
 
                 {/* MAIN 3D CARD */}
 
-                <div className="relative overflow-hidden rounded-[2.5rem] border border-green-200 bg-gradient-to-br from-white via-green-50/80 to-emerald-100/90 p-7 shadow-[0_35px_80px_-25px_rgba(22,101,52,0.45)] dark:border-green-400/20 dark:from-white/[0.04] dark:via-white/[0.02] dark:to-green-950/50 dark:shadow-black/40 sm:p-9">
-
+                <div className="relative overflow-hidden rounded-[2.5rem] border border-green-200 bg-gradient-to-br from-white via-green-50/80 to-emerald-100/90 p-6 shadow-[0_35px_80px_-25px_rgba(22,101,52,0.45)] dark:border-green-400/20 dark:from-white/[0.04] dark:via-white/[0.02] dark:to-green-950/50 dark:shadow-black/40 sm:p-9">
                   {/* TOP LIGHT REFLECTION */}
 
                   <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent dark:via-white/20" />
@@ -365,7 +363,6 @@ export default function Contact() {
                   <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-green-400/20 blur-3xl dark:bg-green-400/10" />
 
                   <div className="relative">
-
                     {/* ICON TILE */}
 
                     <motion.div
@@ -391,8 +388,8 @@ export default function Contact() {
                     </h2>
 
                     <p className="mt-4 text-sm leading-7 text-gray-600 dark:text-gray-400">
-                      Engineering and project support for Bio-CNG, Biogas,
-                      Solar Power, Biodiesel and sustainable energy projects.
+                      Engineering and project support for Bio-CNG, Biogas, Solar
+                      Power, Biodiesel and sustainable energy projects.
                     </p>
 
                     <div className="mt-7 space-y-3">
@@ -423,9 +420,7 @@ export default function Contact() {
                         value={contactDetails.workingHours}
                       />
                     </div>
-
                   </div>
-
                 </div>
 
                 {/* FLOATING LEFT ACCENT */}
@@ -457,10 +452,8 @@ export default function Contact() {
                 >
                   <Phone size={20} />
                 </motion.div>
-
               </div>
             </motion.div>
-
           </div>
         </div>
 

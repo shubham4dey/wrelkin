@@ -104,7 +104,7 @@ export default function Government() {
           HERO
       ===================================================== */}
 
-      <section className="relative overflow-hidden bg-white pt-2 transition-colors duration-500 dark:bg-[#031009] sm:pt-4 lg:pt-8">
+      <section className="relative overflow-hidden bg-white pt-10 transition-colors duration-500 dark:bg-[#031009] sm:pt-14 lg:pt-16">
         {/* =================================================
             HERO BACKGROUND
         ================================================= */}
