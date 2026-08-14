@@ -1,0 +1,612 @@
+/* =========================================================
+   WRELKIN HERO PERFORMANCE CSS
+========================================================= */
+
+
+/* =========================================================
+   FLOATING ELEMENTS
+========================================================= */
+
+.hero-float {
+  animation: heroFloat var(--float-duration, 5s) ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+
+  will-change: transform;
+
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes heroFloat {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0,
+        var(--float-distance, -6px),
+        0);
+  }
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.hero-particle {
+  animation: heroParticle 5s ease-in-out infinite;
+  animation-delay: var(--particle-delay, 0s);
+
+  will-change: transform, opacity;
+
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+}
+
+@keyframes heroParticle {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================================================
+   RISING GAS BUBBLES
+========================================================= */
+
+.hero-bubble {
+  animation: heroBubble var(--bubble-duration, 4s) linear infinite;
+
+  animation-delay: var(--bubble-delay, 0s);
+
+  will-change: transform, opacity;
+
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+}
+
+@keyframes heroBubble {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  85% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate3d(0, -200px, 0);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   ROTATING RINGS
+========================================================= */
+
+.hero-ring {
+  will-change: transform;
+
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+
+  transform-origin: center;
+}
+
+.hero-ring-outer {
+  animation: heroRingOuter 40s linear infinite;
+}
+
+.hero-ring-inner {
+  animation: heroRingInner 28s linear infinite;
+}
+
+@keyframes heroRingOuter {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroRingInner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+/* =========================================================
+   AURORA
+========================================================= */
+
+.hero-aurora {
+  will-change: transform, opacity;
+
+  transform: translate3d(0, 0, 0);
+
+  backface-visibility: hidden;
+}
+
+.hero-aurora-one {
+  animation: auroraOne 12s ease-in-out infinite;
+}
+
+.hero-aurora-two {
+  animation: auroraTwo 14s ease-in-out infinite;
+}
+
+.hero-aurora-three {
+  animation: auroraThree 11s ease-in-out infinite;
+}
+
+@keyframes auroraOne {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.08) rotate(6deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes auroraTwo {
+
+  0%,
+  100% {
+    transform: scale(1.05) rotate(0deg);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: scale(1) rotate(-5deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes auroraThree {
+
+  0%,
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale(1.08);
+    opacity: 0.45;
+  }
+}
+
+
+/* =========================================================
+   HALO
+========================================================= */
+
+.hero-halo {
+  animation: heroHalo 7s ease-in-out infinite;
+
+  will-change: opacity, transform;
+
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes heroHalo {
+
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================================================
+   SUN
+========================================================= */
+
+.hero-sun {
+  animation: heroSun 5s ease-in-out infinite;
+
+  will-change: transform, opacity;
+
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes heroSun {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   TANK INNER GLOW
+========================================================= */
+
+.hero-tank-glow {
+  animation: tankGlow 4s ease-in-out infinite;
+
+  will-change: transform, opacity;
+}
+
+@keyframes tankGlow {
+
+  0%,
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(0.9);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale(1.08);
+    opacity: 0.75;
+  }
+}
+
+
+/* =========================================================
+   TANK PARTICLES
+========================================================= */
+
+.hero-tank-particle {
+  will-change: transform, opacity;
+
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.hero-tank-particle-one {
+  animation: tankParticleOne 3s infinite;
+}
+
+.hero-tank-particle-two {
+  animation: tankParticleTwo 3.5s infinite;
+  animation-delay: 1s;
+}
+
+.hero-tank-particle-three {
+  animation: tankParticleThree 4s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes tankParticleOne {
+  0% {
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes tankParticleTwo {
+  0% {
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes tankParticleThree {
+  0% {
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   PIPE FLOW
+========================================================= */
+
+.hero-pipe-flow {
+  will-change: transform, opacity;
+
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.hero-pipe-flow-one {
+  animation-name: pipeFlow;
+}
+
+.hero-pipe-flow-two {
+  animation-name: pipeFlow;
+  animation-delay: 1.2s;
+}
+
+@keyframes pipeFlow {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(120px, 0, 0);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   BUILDING LIGHTS
+========================================================= */
+
+.hero-building-light {
+  animation: buildingLight 2s ease-in-out infinite;
+  animation-delay: var(--light-delay, 0s);
+
+  will-change: opacity;
+}
+
+@keyframes buildingLight {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   FLAME
+========================================================= */
+
+.hero-flame {
+  animation: heroFlame 1.2s ease-in-out infinite;
+
+  will-change: transform, opacity;
+
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-flame-inner {
+  animation: heroFlameInner 0.8s ease-in-out infinite;
+
+  will-change: transform, opacity;
+
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes heroFlame {
+  0% {
+    transform: scale3d(1, 1, 1);
+    opacity: 0.85;
+  }
+
+  25% {
+    transform: scale3d(0.92, 1.12, 1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale3d(1.08, 0.95, 1);
+    opacity: 0.9;
+  }
+
+  75% {
+    transform: scale3d(0.95, 1.1, 1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 0.85;
+  }
+}
+
+@keyframes heroFlameInner {
+
+  0%,
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.2, 1);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   PROCESS ARROWS
+========================================================= */
+
+.hero-process-arrow {
+  display: inline-block;
+
+  animation: processArrow 1.8s ease-in-out infinite;
+
+  will-change: transform, opacity;
+}
+
+@keyframes processArrow {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translate3d(4px, 0, 0);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.hero-scroll-indicator {
+  animation: scrollIndicator 2s ease-in-out infinite;
+
+  will-change: transform, opacity;
+}
+
+@keyframes scrollIndicator {
+
+  0%,
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translate3d(-50%, 7px, 0);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-float,
+  .hero-particle,
+  .hero-bubble,
+  .hero-ring,
+  .hero-aurora,
+  .hero-halo,
+  .hero-sun,
+  .hero-tank-glow,
+  .hero-tank-particle,
+  .hero-pipe-flow,
+  .hero-building-light,
+  .hero-flame,
+  .hero-flame-inner,
+  .hero-process-arrow,
+  .hero-scroll-indicator {
+    animation: none !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE PERFORMANCE
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-aurora {
+    filter: blur(70px);
+  }
+
+  .hero-halo {
+    filter: blur(35px);
+  }
+
+  .hero-particle {
+    animation-duration: 6s;
+  }
+
+  .hero-bubble {
+    animation-duration: 5s;
+  }
+
+  .hero-ring-outer {
+    animation-duration: 50s;
+  }
+
+  .hero-ring-inner {
+    animation-duration: 38s;
+  }
+}
+
+
+/* =========================================================
+   LOW POWER / SLOW DEVICE FALLBACK
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,316 @@
+.theme-toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(56, 189, 248, 0.15);
+  transition:
+    background 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.08),
+    0 6px 20px rgba(56, 189, 248, 0.25);
+}
+
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.toggle-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  transition: opacity 0.5s ease;
+}
+
+.theme-toggle-dark .toggle-bg {
+  background: linear-gradient(135deg, #0c1e2e 0%, #0f172a 100%);
+}
+
+/* =========================================
+   DARK BACKGROUND
+========================================= */
+
+.theme-toggle-dark {
+  background: linear-gradient(135deg, #0c1e2e 0%, #0f172a 100%);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(56, 189, 248, 0.2);
+}
+
+/* =========================================
+   CLOUDS (Light mode)
+========================================= */
+
+.toggle-clouds {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.theme-toggle-dark .toggle-clouds {
+  opacity: 0;
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.cloud-1 {
+  width: 12px;
+  height: 8px;
+  top: 8px;
+  left: 8px;
+}
+
+.cloud-2 {
+  width: 10px;
+  height: 6px;
+  top: 14px;
+  left: 14px;
+}
+
+/* =========================================
+   ORB
+========================================= */
+
+.theme-orb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 5;
+  color: #f59e0b;
+  background: radial-gradient(circle at 35% 30%, #fef3c7 0%, #fbbf24 50%, #f59e0b 100%);
+  box-shadow:
+    0 2px 8px rgba(245, 158, 11, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.9),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  transition:
+    background 0.5s ease,
+    color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Dark orb */
+
+.theme-toggle-dark .theme-orb {
+  color: #93c5fd;
+  background: radial-gradient(circle at 35% 30%, #1e3a5f 0%, #1e40af 50%, #1e3a8a 100%);
+  box-shadow:
+    0 2px 10px rgba(59, 130, 246, 0.5),
+    0 0 12px rgba(147, 197, 253, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Orb glow */
+
+.orb-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.theme-toggle-dark .orb-glow {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+}
+
+/* =========================================
+   ENERGY GLOW
+========================================= */
+
+.energy-glow {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 4px;
+  top: 3px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.3);
+  filter: blur(8px);
+  opacity: 0;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.theme-toggle-dark .energy-glow {
+  opacity: 1;
+  transform: translateX(22px);
+  background: rgba(59, 130, 246, 0.4);
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+.theme-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.theme-toggle-dark .theme-stars {
+  opacity: 1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #93c5fd;
+  box-shadow: 0 0 6px rgba(147, 197, 253, 0.9);
+  animation: starPulse 2s ease-in-out infinite;
+}
+
+.star-1 {
+  top: 6px;
+  left: 32px;
+}
+
+.star-2 {
+  top: 18px;
+  left: 36px;
+  width: 1.5px;
+  height: 1.5px;
+  animation-delay: 0.4s;
+}
+
+.star-3 {
+  top: 8px;
+  left: 41px;
+  width: 1px;
+  height: 1px;
+  animation-delay: 0.8s;
+}
+
+.star-4 {
+  top: 17px;
+  left: 45px;
+  width: 1px;
+  height: 1px;
+  animation-delay: 1.2s;
+}
+
+.star-5 {
+  top: 12px;
+  left: 38px;
+  width: 1.5px;
+  height: 1.5px;
+  animation-delay: 0.6s;
+}
+
+.star-6 {
+  top: 20px;
+  left: 42px;
+  width: 1px;
+  height: 1px;
+  animation-delay: 1s;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+/* =========================================
+   SHOOTING STAR
+========================================= */
+
+.shooting-star {
+  position: absolute;
+  top: 8px;
+  left: 28px;
+  width: 8px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #93c5fd);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* =========================================
+   PARTICLES
+========================================= */
+
+.toggle-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.theme-toggle-dark .toggle-particles {
+  opacity: 1;
+}
+
+.particle {
+  position: absolute;
+  bottom: 4px;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: #93c5fd;
+  box-shadow: 0 0 4px rgba(147, 197, 253, 0.8);
+}
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media (max-width: 1023px) {
+  .theme-toggle {
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+    display: block;
+  }
+}
