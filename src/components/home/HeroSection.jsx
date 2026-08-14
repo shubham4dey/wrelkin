@@ -45,7 +45,8 @@ export default function HeroSection() {
       ===================================================== */}
 
       <div className="relative mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl items-center px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
+        {/* FIX: desktop/laptop pe left-right ke beech proper gap */}
+        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 xl:gap-16 2xl:gap-20">
           {/* =================================================
               LEFT CONTENT
           ================================================= */}
@@ -68,19 +69,18 @@ export default function HeroSection() {
                 duration: 0.8,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mb-7 inline-flex items-center gap-3 rounded-full border border-green-200/70 bg-white/60 px-4 py-2 text-[11px] font-semibold tracking-[0.18em] text-green-700 shadow-sm backdrop-blur-xl dark:border-green-800/40 dark:bg-green-950/30 dark:text-green-300"
+              className="mb-7 inline-flex max-w-full items-center gap-2 whitespace-nowrap rounded-full border border-green-200/70 bg-white/60 px-3 py-2 text-[9px] font-semibold tracking-[0.1em] text-green-700 shadow-sm backdrop-blur-xl dark:border-green-800/40 dark:bg-green-950/30 dark:text-green-300 sm:gap-3 sm:px-4 sm:text-[11px] sm:tracking-[0.18em]"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
 
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
 
-              <Recycle size={13} className="text-emerald-600" />
+              <Recycle size={13} className="shrink-0 text-emerald-600" />
 
               <span>BIOGAS • CLEAN ENERGY • SUSTAINABILITY</span>
             </motion.div>
-
             {/* =================================================
                 HEADING
             ================================================= */}
@@ -331,7 +331,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* =================================================
-                PROCESS
+                PROCESS (FIX: mobile pe wrap hota hai, clip nahi)
             ================================================= */}
 
             <motion.div
@@ -347,7 +347,7 @@ export default function HeroSection() {
                 duration: 0.8,
                 delay: 1.15,
               }}
-              className="mt-8 flex flex-nowrap items-center gap-x-3 gap-y-3 sm:gap-x-4 lg:gap-x-5"
+              className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 sm:flex-nowrap sm:gap-x-4 lg:gap-x-5"
             >
               <ProcessItem icon={<Recycle size={14} />} text="Organic Waste" />
 
@@ -748,11 +748,11 @@ function BiogasVisual() {
         </div>
 
         {/* =================================================
-            TOP RIGHT — ENERGY CARD (EQUALIZER)
+            TOP RIGHT — ENERGY CARD (FIX: mobile pe compact)
         ================================================= */}
 
         <div
-          className="hero-float absolute right-4 top-4 rounded-2xl border border-white/70 bg-white/85 px-4 py-3 shadow-xl backdrop-blur dark:border-white/10 dark:bg-[#0b2417]/85"
+          className="hero-float absolute right-4 top-4 rounded-2xl border border-white/70 bg-white/85 px-3 py-2 shadow-xl backdrop-blur dark:border-white/10 dark:bg-[#0b2417]/85 sm:px-4 sm:py-3"
           style={{
             "--float-distance": "-8px",
             "--float-duration": "5s",
@@ -774,7 +774,8 @@ function BiogasVisual() {
               </p>
             </div>
 
-            <div className="ml-1 flex h-8 items-end gap-1">
+            {/* Equalizer bars — sirf sm+ pe dikhte hain */}
+            <div className="ml-1 hidden h-8 items-end gap-1 sm:flex">
               {[0.45, 0.8, 0.6, 1, 0.7].map((value, barIndex) => (
                 <motion.span
                   key={barIndex}
@@ -883,7 +884,7 @@ function BiogasVisual() {
       </div>
 
       {/* =================================================
-          OUTSIDE FLOATING CARDS
+          OUTSIDE FLOATING CARDS (FIX: tablet pe clip nahi honge)
       ================================================= */}
 
       {/* LEFT CARD */}
@@ -901,7 +902,7 @@ function BiogasVisual() {
           delay: 1.1,
           duration: 0.7,
         }}
-        className="absolute -left-6 top-16 hidden rounded-2xl border border-emerald-100 bg-white/90 px-4 py-3 shadow-xl sm:block dark:border-white/10 dark:bg-[#0b2417]/90"
+        className="absolute -left-3 top-16 hidden rounded-2xl border border-emerald-100 bg-white/90 px-4 py-3 shadow-xl sm:block dark:border-white/10 dark:bg-[#0b2417]/90 xl:-left-6"
       >
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-100 to-green-200 text-emerald-700 dark:from-emerald-900/50 dark:to-green-900/50 dark:text-emerald-300">
@@ -935,7 +936,7 @@ function BiogasVisual() {
           delay: 1.3,
           duration: 0.7,
         }}
-        className="absolute -right-6 bottom-20 hidden rounded-2xl border border-emerald-100 bg-white/90 px-4 py-3 shadow-xl sm:block dark:border-white/10 dark:bg-[#0b2417]/90"
+        className="absolute -right-3 bottom-20 hidden rounded-2xl border border-emerald-100 bg-white/90 px-4 py-3 shadow-xl sm:block dark:border-white/10 dark:bg-[#0b2417]/90 xl:-right-6"
       >
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-100 to-orange-200 text-orange-700 dark:from-orange-900/50 dark:to-red-900/50 dark:text-orange-300">
