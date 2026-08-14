@@ -11,9 +11,7 @@ import {
   Menu,
   X,
   ArrowUpRight,
-  // Search,
   Sparkles,
-  // Zap,
   Sun as SunIcon,
 } from "lucide-react";
 
@@ -28,16 +26,10 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
-  // const [searchOpen, setSearchOpen] = useState(false);
 
   const location = useLocation();
   const { scrollYProgress, scrollY } = useScroll();
 
-  /*
-   * IMPORTANT:
-   * No window scroll event.
-   * Framer Motion directly observes scroll position.
-   */
   useMotionValueEvent(scrollY, "change", (latest) => {
     const next = latest > 30;
 
@@ -50,7 +42,6 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false);
     setProductsOpen(false);
-    // setSearchOpen(false);
   }, [location.pathname]);
 
   const links = [
@@ -291,16 +282,6 @@ export default function Navbar() {
 
             {/* ================= RIGHT SIDE ================= */}
             <div className="flex items-center gap-2 sm:gap-3">
-              {/* Search */}
-              {/* <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setSearchOpen((prev) => !prev)}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition-colors duration-200 hover:bg-green-100 dark:bg-[#1a2f26] dark:text-gray-200 dark:hover:bg-green-900/40"
-                aria-label="Search"
-              >
-                <Search size={18} />
-              </motion.button> */}
-
               {/* Desktop theme */}
               <div className="hidden lg:block">
                 <ThemeToggle />
@@ -362,36 +343,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ================= SEARCH ================= */}
-        {/* <AnimatePresence initial={false}>
-          {searchOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="overflow-hidden border-t border-gray-100 bg-white dark:border-white/10 dark:bg-[#07130D]"
-            >
-              <div className="mx-auto max-w-7xl px-4 py-4 sm:px-5 lg:px-8">
-                <div className="relative">
-                  <Search
-                    size={20}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Search for products, services, projects..."
-                    className="w-full rounded-full border border-gray-200 bg-gray-100 py-3 pl-12 pr-4 text-gray-900 outline-none transition-shadow focus:ring-2 focus:ring-green-500 dark:border-white/10 dark:bg-white/10 dark:text-white"
-                    autoFocus
-                  />
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence> */}
-
-        {/* ================= MOBILE MENU ================= */}
+        {/* ================= MOBILE MENU (header ke andar hi flush attach) ================= */}
         <MobileMenu
           open={mobileOpen}
           onClose={() => setMobileOpen(false)}

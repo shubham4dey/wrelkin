@@ -265,7 +265,7 @@ export default function HeroSection() {
               }}
               className="mt-9 flex flex-wrap items-center gap-4"
             >
-              <Link to="/services">
+              <Link to="/epc">
                 <motion.button
                   whileHover={{
                     scale: 1.04,
