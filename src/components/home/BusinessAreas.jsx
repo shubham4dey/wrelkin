@@ -212,7 +212,7 @@ export default function BusinessAreas() {
 
             <p className="mt-6 max-w-sm text-sm leading-6 text-gray-500 dark:text-gray-400">
               From organic waste management to renewable fuel and energy
-              generation, we deliver integrated solutions for a cleaner future.
+              generation, we deliver integrated solutions for a greener future.
             </p>
           </motion.div>
 
@@ -242,7 +242,7 @@ export default function BusinessAreas() {
                   className="absolute inset-x-0 bottom-1 top-1 origin-left rounded-lg bg-emerald-300/30 dark:bg-emerald-400/10"
                 />
 
-                <span className="relative"> clean energy</span>
+                <span className="relative"> green energy</span>
               </span>
 
               <br />

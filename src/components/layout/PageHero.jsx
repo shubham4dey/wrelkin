@@ -8,11 +8,15 @@ import {
   Sun,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import about1 from "../../assets/about/about1.avif";
+import about2 from "../../assets/about/about2.avif";
+import about3 from "../../assets/about/about3.avif";
+
 
 export default function PageHero({
   title = "About Us",
   subtitle = "Powering the Future with Renewable Energy",
-  description = "WRELKIN INDIA PRIVATE LIMITED delivers innovative renewable energy and EPC solutions across India, transforming resources into cleaner energy for a sustainable future.",
+  description = "WRELKIN INDIA PRIVATE LIMITED delivers innovative renewable energy and EPC solutions across India, transforming resources into greener energy for a sustainable future.",
   showButton = false,
   buttonText = "Get Started",
   buttonLink = "/enquiry",
@@ -32,21 +36,19 @@ export default function PageHero({
       description: description,
       icon: Leaf,
       badge: "01",
-      image:
-        "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2400&q=90",
+      image: about1,
     },
 
     {
       id: 2,
       label: "RENEWABLE ENERGY & EPC",
-      title: "Engineering a Cleaner Energy Future",
+      title: "Engineering a Greener Energy Future",
       subtitle: "Innovation • Engineering • Sustainability",
       description:
         "We deliver complete renewable energy and EPC solutions across Bio-CNG, Biogas, Solar Power, Biodiesel and Waste-to-Energy projects.",
       icon: Sun,
       badge: "02",
-      image:
-        "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2400&q=90",
+      image: about2,
     },
 
     {
@@ -58,8 +60,7 @@ export default function PageHero({
         "With engineering excellence, advanced technology and responsible project execution, WRELKIN works towards creating sustainable long-term value for industries and communities.",
       icon: Recycle,
       badge: "03",
-      image:
-        "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=2400&q=90",
+      image: about3,
     },
   ];
 

@@ -204,7 +204,7 @@ export default function HomeCTA() {
             <Sparkles size={14} />
 
             <span>
-              Build a cleaner future with WRELKIN
+              Build a greener future with WRELKIN
             </span>
           </motion.div>
         </motion.div>

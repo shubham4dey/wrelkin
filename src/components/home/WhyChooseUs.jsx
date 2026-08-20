@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
       icon: Leaf,
       title: "Sustainable Technology",
       description:
-        "We transform organic waste and renewable resources into valuable energy while supporting cleaner and more sustainable operations.",
+        "We transform organic waste and renewable resources into valuable energy while supporting greener and more sustainable operations.",
       color: "from-lime-400 to-emerald-600",
       glow: "rgba(132, 204, 22, 0.15)",
     },
@@ -315,7 +315,7 @@ export default function WhyChooseUs() {
             <div className="relative grid grid-cols-2 border-t border-white/10 lg:border-l lg:border-t-0">
               <Stat
                 value="10+"
-                label="Years Combined Experience"
+                label="Years Domestic Experience"
                 delay={0.2}
               />
 

@@ -317,7 +317,8 @@ function SplitText({ text, delay = 0 }) {
 
 /* =========================================================
    GALLERY CARD
-   LIGHTWEIGHT + SMOOTH HOVER
+   MOBILE/TABLET: overlay always visible
+   DESKTOP (lg+): hover behaviour same as before
 ========================================================= */
 
 function GalleryCard({ item, className = "", featured = false, index = 0 }) {
@@ -382,12 +383,16 @@ function GalleryCard({ item, className = "", featured = false, index = 0 }) {
 
         <div className="absolute inset-0 bg-green-500/0 transition-colors duration-500 group-hover:bg-green-500/10" />
 
+        {/* CENTER CIRCLE — sirf desktop (lg+) pe dikhta hai, mobile pe hidden */}
+
         <div
           className="
     absolute inset-0
     z-10
-    flex items-center justify-center
+    hidden
+    items-center justify-center
     transition-all duration-500
+    lg:flex
     group-hover:opacity-0
     group-hover:scale-75
   "
@@ -408,7 +413,7 @@ function GalleryCard({ item, className = "", featured = false, index = 0 }) {
       </div>
 
       {/* =====================================================
-          TOP BADGE
+          TOP BADGE — mobile/tablet pe always visible, desktop pe hover
       ====================================================== */}
 
       <div
@@ -417,10 +422,11 @@ function GalleryCard({ item, className = "", featured = false, index = 0 }) {
     left-5
     top-5
     z-20
-    opacity-0
-    group-hover:opacity-100
+    opacity-100
     transition-all
     duration-500
+    lg:opacity-0
+    lg:group-hover:opacity-100
   "
       >
         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-xl">
@@ -430,7 +436,7 @@ function GalleryCard({ item, className = "", featured = false, index = 0 }) {
       </div>
 
       {/* =====================================================
-          CONTENT
+          CONTENT — mobile/tablet pe always visible, desktop pe hover
       ====================================================== */}
 
       <div
@@ -443,10 +449,11 @@ function GalleryCard({ item, className = "", featured = false, index = 0 }) {
     from-black/90
     via-black/45
     to-transparent
-    opacity-0
+    opacity-100
     transition-all
     duration-500
-    group-hover:opacity-100
+    lg:opacity-0
+    lg:group-hover:opacity-100
   "
       >
         <div className="flex items-end justify-between gap-4">

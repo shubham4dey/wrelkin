@@ -28,6 +28,7 @@ import {
   ClipboardList,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import biogasImg from "../../assets/products/p2.png";
 
 export default function Services() {
   return (
@@ -94,7 +95,7 @@ export default function Services() {
               <h1 className="mt-5 text-[2.7rem] font-semibold leading-[1.02] tracking-[-0.045em] text-gray-950 transition-colors duration-500 dark:text-white sm:mt-6 sm:text-5xl sm:leading-[1] lg:mt-7 lg:text-[4.5rem] xl:text-[4.8rem]">
                 Engineering a{" "}
                 <span className="text-green-600 dark:text-green-400">
-                  cleaner
+                  greener
                 </span>{" "}
                 energy future.
               </h1>
@@ -178,34 +179,18 @@ export default function Services() {
                     <span className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-lime-400 shadow-md shadow-lime-400/50" />
                   </motion.div>
 
-                  {/* CENTER TILE */}
+                  {/* =====================================================
+                      CENTER IMAGE — ORBIT CIRCLE KE BARABAR BADA
+                  ====================================================== */}
 
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-
-                    <motion.div
-                      animate={{
-                        y: [0, -8, 0],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                      className="relative flex h-28 w-28 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-green-500 via-green-600 to-emerald-700 text-white shadow-2xl shadow-green-600/40 ring-1 ring-white/40 dark:shadow-green-500/20 sm:h-32 sm:w-32 sm:rounded-[2rem]"
-                    >
-                      <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.4),transparent_55%)]" />
-
-                      <Leaf
-                        size={50}
-                        strokeWidth={1.4}
-                        className="relative sm:h-[54px] sm:w-[54px]"
+                  <div className="absolute inset-11 sm:inset-14">
+                    <div className="h-full w-full overflow-hidden rounded-full border-4 border-white shadow-2xl shadow-green-900/30 ring-1 ring-green-200 dark:border-white/20 dark:ring-green-800/40">
+                      <img
+                        src={biogasImg}
+                        alt="Biogas Plant"
+                        className="h-full w-full object-cover"
                       />
-                    </motion.div>
-
-                    {/* FLOATING SHADOW UNDER TILE */}
-
-                    <div className="mx-auto mt-5 h-3.5 w-24 rounded-full bg-green-900/25 blur-[6px] dark:bg-black/60" />
-
+                    </div>
                   </div>
 
                   {/* CORNER TILE — SUN */}
@@ -404,7 +389,7 @@ function ServicesIntroduction() {
             <h2 className="text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-gray-950 dark:text-white sm:text-4xl lg:text-5xl xl:text-6xl">
               Engineering solutions for a{" "}
               <span className="text-green-600 dark:text-green-400">
-                cleaner
+                greener
               </span>{" "}
               tomorrow.
             </h2>
@@ -1387,7 +1372,7 @@ function ServicesCTA() {
           </p>
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-4xl lg:text-5xl">
-            Let's build a cleaner energy future together.
+            Let's build a greener energy future together.
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 dark:text-gray-400 sm:text-base">

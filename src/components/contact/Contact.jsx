@@ -41,8 +41,8 @@ const contactDetails = {
   secondaryEmail: "infowrelkin@gmail.com",
 
   // Replace these when actual number is available
-  phone: "+91XXXXXXXXXX",
-  whatsapp: "91XXXXXXXXXX",
+  phone: "01169310316",
+  whatsapp: "3335650403",
 
   office: {
     title: "Corporate Office",
@@ -275,7 +275,7 @@ export default function Contact() {
               <h1 className="mt-6 max-w-3xl text-[2.6rem] font-semibold leading-[1.05] tracking-[-0.05em] text-gray-950 transition-colors duration-500 dark:text-white sm:text-6xl sm:leading-[0.98] lg:text-[4.7rem]">
                 Let's build a{" "}
                 <span className="text-green-600 dark:text-green-400">
-                  cleaner energy
+                  greener energy
                 </span>{" "}
                 future together.
               </h1>
@@ -1100,7 +1100,7 @@ function ContactMiniItem({ icon: Icon, label, value, href }) {
     return (
       <a
         href={href}
-        className="flex items-center gap-3 rounded-xl border border-green-200/80 bg-white/90 p-3 shadow-md shadow-green-900/5 backdrop-blur transition hover:border-green-400/60 hover:bg-white dark:border-white/10 dark:bg-white/[0.04] dark:hover:border-green-400/30"
+        className="flex items-center gap-3 rounded-xl border border-green-200/80 bg-white/90 p-3 shadow-md shadow-green-900/5 backdrop-blur transition hover:border-green-400/60 hover:bg-white dark:border-white/10 dark:bg-white/[0.04] dark:hover:border-green-400/30 dark:hover:bg-white/[0.08]"
       >
         {content}
       </a>

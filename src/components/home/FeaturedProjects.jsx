@@ -159,7 +159,7 @@ export default function FeaturedProjects() {
 
                 <span className="relative">
                   {" "}
-                  cleaner future.
+                  greener future.
                 </span>
               </span>
             </h2>

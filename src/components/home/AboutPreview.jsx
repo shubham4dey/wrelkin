@@ -24,14 +24,14 @@ const cards = [
     icon: Factory,
     number: "02",
     title: "Biogas Plant",
-    text: "Advanced anaerobic digestion systems convert organic feedstock into clean renewable biogas.",
+    text: "Advanced anaerobic digestion systems convert organic feedstock into green  renewable biogas.",
     color: "from-lime-400 to-emerald-500",
     glowColor: "rgba(163, 230, 53, 0.20)",
   },
   {
     icon: Zap,
     number: "03",
-    title: "Clean Energy",
+    title: "Green Energy",
     text: "Biogas can be utilised for power, heat, cooking fuel and upgraded renewable energy applications.",
     color: "from-amber-400 to-orange-500",
     glowColor: "rgba(251, 191, 36, 0.18)",
@@ -118,7 +118,7 @@ export default function AboutPreview() {
 
               <br className="hidden sm:block" />
 
-              <SplitText text="clean energy." delay={0.45} />
+              <SplitText text="green energy." delay={0.45} />
             </h2>
           </motion.div>
         </div>
@@ -651,7 +651,7 @@ function AdvancedRightContent() {
         <p className="max-w-xl text-lg leading-8 text-gray-700 dark:text-gray-300">
           WRELKIN INDIA PRIVATE LIMITED focuses on building sustainable
           biogas solutions that help industries, businesses and communities
-          manage organic waste while generating clean and renewable energy.
+          manage organic waste while generating green and renewable energy.
         </p>
 
         <p className="mt-6 max-w-xl text-sm leading-7 text-gray-500 dark:text-gray-400">
@@ -791,10 +791,7 @@ function AdvancedProcessCard({ card, index }) {
         delay: index * 0.08,
         ease: [0.22, 1, 0.36, 1],
       }}
-      whileHover={{
-        y: -5,
-      }}
-      className="group relative overflow-hidden rounded-[1.5rem] border border-gray-200 bg-white p-6 transition-all duration-500 hover:border-green-300 hover:shadow-xl hover:shadow-green-900/5 dark:border-white/10 dark:bg-white/[0.025] dark:hover:border-green-700/50 dark:hover:shadow-black/20"
+      className="group relative overflow-hidden rounded-[1.5rem] border border-gray-200 bg-white p-6 transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-green-300 hover:shadow-lg dark:border-white/10 dark:bg-white/[0.025] dark:hover:border-green-700/50"
     >
       {/* Hover Glow */}
       <motion.div

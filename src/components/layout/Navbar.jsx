@@ -65,7 +65,7 @@ export default function Navbar() {
     {
       name: "Solar Solutions",
       path: "/products/solar",
-      description: "Clean solar energy systems",
+      description: "Green solar energy systems",
       icon: SunIcon,
       gradient: "from-amber-400 to-orange-500",
     },

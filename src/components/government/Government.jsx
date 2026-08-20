@@ -408,7 +408,7 @@ export default function Government() {
 
               <div className="mt-5 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
                 <Sparkles size={17} className="text-green-500" />
-                Supporting India's clean energy transition
+                Supporting India's green energy transition
               </div>
             </motion.div>
 

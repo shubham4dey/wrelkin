@@ -141,8 +141,8 @@ export default function ClientsSection() {
 
             <p className="mt-5 max-w-sm text-sm leading-6 text-gray-500 dark:text-gray-400">
               Building long-term relationships with government organizations,
-              industrial clients and private enterprises across renewable
-              energy projects.
+              industrial clients and private enterprises across renewable energy
+              projects.
             </p>
           </motion.div>
 
@@ -166,10 +166,7 @@ export default function ClientsSection() {
             }}
           >
             <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-gray-950 dark:text-white sm:text-5xl lg:text-6xl">
-              <SplitText
-                text="Trusted by organisations"
-                delay={0.1}
-              />
+              <SplitText text="Trusted by organisations" delay={0.1} />
 
               <span className="relative inline-block text-green-600 dark:text-green-400">
                 {/* Highlight */}
@@ -191,10 +188,7 @@ export default function ClientsSection() {
                   className="absolute inset-x-0 bottom-1 top-1 origin-left rounded-lg bg-gradient-to-r from-emerald-400/20 to-lime-400/20"
                 />
 
-                <span className="relative">
-                  {" "}
-                  building tomorrow.
-                </span>
+                <span className="relative"> building tomorrow.</span>
               </span>
             </h2>
           </motion.div>
@@ -252,11 +246,7 @@ export default function ClientsSection() {
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {clients.map((client, index) => (
-            <ClientCard
-              key={client.name}
-              client={client}
-              index={index}
-            />
+            <ClientCard key={client.name} client={client} index={index} />
           ))}
         </div>
 
@@ -286,11 +276,7 @@ export default function ClientsSection() {
           {/* Animated Gradient Border */}
           <motion.div
             animate={{
-              backgroundPosition: [
-                "0% 50%",
-                "100% 50%",
-                "0% 50%",
-              ],
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
             transition={{
               duration: 8,
@@ -344,7 +330,7 @@ export default function ClientsSection() {
                 </p>
 
                 <h3 className="mt-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
-                  Let’s build a cleaner energy future together.
+                  Let’s build a greener energy future together.
                 </h3>
 
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500 dark:text-gray-400">
@@ -387,9 +373,7 @@ export default function ClientsSection() {
                   }}
                 />
 
-                <span className="relative z-10">
-                  Start a Partnership
-                </span>
+                <span className="relative z-10">Start a Partnership</span>
 
                 <ArrowRight
                   size={17}
@@ -446,12 +430,7 @@ function SplitText({ text, delay = 0 }) {
    TRUST ITEM
 ========================================================= */
 
-function TrustItem({
-  icon: Icon,
-  title,
-  text,
-  delay,
-}) {
+function TrustItem({ icon: Icon, title, text, delay }) {
   return (
     <motion.div
       initial={{
@@ -477,14 +456,17 @@ function TrustItem({
       className="
         group relative flex items-center gap-4 overflow-hidden
         rounded-2xl
-        border border-white/10
-        bg-white/[0.025]
+        border border-gray-200
+bg-white
+dark:border-white/10
+dark:bg-white/[0.025]
         p-5
         shadow-sm
         transition-all duration-500 ease-out
         hover:border-green-500/30
         hover:bg-green-500/[0.06]
-        hover:shadow-lg hover:shadow-green-950/20
+        hover:shadow-lg hover:shadow-green-200/60
+dark:hover:shadow-green-950/20
       "
     >
       {/* Smooth Hover Glow */}
@@ -513,29 +495,36 @@ function TrustItem({
           damping: 18,
         }}
         className="
-          relative z-10
-          flex h-11 w-11 shrink-0
-          items-center justify-center
-          rounded-xl
-          border border-green-500/20
-          bg-green-500/10
-          text-green-400
-          transition-all duration-500
-          group-hover:border-green-400/30
-          group-hover:bg-green-500/20
-          group-hover:text-green-300
-        "
+        relative z-10
+        flex h-11 w-11 shrink-0
+        items-center justify-center
+        rounded-xl
+        border border-green-200
+        bg-green-100
+        text-green-700
+        transition-all duration-500
+        group-hover:border-green-400
+        group-hover:bg-green-200
+        group-hover:text-green-800
+
+        dark:border-green-500/20
+        dark:bg-green-500/10
+        dark:text-green-400
+        dark:group-hover:border-green-400/30
+        dark:group-hover:bg-green-500/20
+        dark:group-hover:text-green-300
+      "
       >
         <Icon size={20} />
       </motion.div>
 
       {/* Content */}
       <div className="relative z-10">
-        <p className="text-sm font-bold text-white transition-colors duration-300">
+        <p className="text-sm font-bold text-gray-900 transition-colors duration-300 dark:text-white">
           {title}
         </p>
 
-        <p className="mt-1 text-xs text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
+        <p className="mt-1 text-xs text-gray-500 transition-colors duration-300 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300">
           {text}
         </p>
       </div>
@@ -560,10 +549,7 @@ function TrustItem({
    CLEAN + SMOOTH HOVER
 ========================================================= */
 
-function ClientCard({
-  client,
-  index,
-}) {
+function ClientCard({ client, index }) {
   return (
     <motion.div
       initial={{
@@ -626,9 +612,7 @@ function ClientCard({
             {/* Static Soft Glow */}
             <div className="pointer-events-none absolute inset-0 rounded-2xl bg-green-400/10 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
 
-            <span className="relative z-10">
-              {client.short}
-            </span>
+            <span className="relative z-10">{client.short}</span>
           </motion.div>
 
           {/* Arrow */}

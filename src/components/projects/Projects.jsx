@@ -6,13 +6,16 @@ import {
   CheckCircle2,
   Cog,
   Factory,
+  Fuel,
   HardHat,
+  Landmark,
   Leaf,
   MapPin,
   Recycle,
   Settings2,
   ShieldCheck,
   Sun,
+  TrainFront,
   Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -21,7 +24,7 @@ export default function Projects() {
   const projectAreas = [
     {
       number: "01",
-      icon: Leaf,
+      icon: Fuel,
       category: "Bio-CNG / CBG",
       title: "CBG & SATAT Project Support",
       description:
@@ -36,7 +39,7 @@ export default function Projects() {
     },
     {
       number: "02",
-      icon: Building2,
+      icon: Landmark,
       category: "Government & Institutional",
       title: "Government & Institutional Projects",
       description:
@@ -51,7 +54,7 @@ export default function Projects() {
     },
     {
       number: "03",
-      icon: HardHat,
+      icon: TrainFront,
       category: "Railway Sector",
       title: "Indian Railways Project Experience",
       description:
@@ -96,7 +99,7 @@ export default function Projects() {
     },
     {
       number: "06",
-      icon: Factory,
+      icon: Leaf,
       category: "Sustainable Fuels",
       title: "Biodiesel, Bioethanol & Biomass Projects",
       description:
@@ -139,10 +142,14 @@ export default function Projects() {
   ];
 
   const projectHighlights = [
-    { icon: Leaf, value: "10+", label: "Years Combined Experience" },
+    { icon: Leaf, value: "10+", label: "Years Domestic Experience" },
     { icon: CalendarDays, value: "2023", label: "Company Established" },
     { icon: Zap, value: "Multi-Tech", label: "Renewable Energy Capabilities" },
-    { icon: ShieldCheck, value: "End-to-End", label: "EPC & Technical Support" },
+    {
+      icon: ShieldCheck,
+      value: "End-to-End",
+      label: "EPC & Technical Support",
+    },
   ];
 
   return (
@@ -189,7 +196,7 @@ export default function Projects() {
               <h1 className="mt-5 text-[2.65rem] font-semibold leading-[1.02] tracking-[-0.045em] text-gray-950 dark:text-white sm:mt-6 sm:text-5xl lg:mt-7 lg:text-[4.5rem] xl:text-[4.8rem]">
                 Engineering projects for a{" "}
                 <span className="text-green-600 dark:text-green-400">
-                  cleaner future.
+                  greener future.
                 </span>
               </h1>
 
@@ -208,7 +215,10 @@ export default function Projects() {
                     className="group inline-flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-green-600/20 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-400 sm:px-7 sm:py-3.5"
                   >
                     Start Your Project
-                    <ArrowRight size={17} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight
+                      size={17}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
                   </motion.span>
                 </Link>
 
@@ -232,7 +242,6 @@ export default function Projects() {
               className="relative w-full"
             >
               <div className="relative mx-auto w-full max-w-[480px]">
-
                 {/* OUTER SOFT GLOW */}
 
                 <div className="absolute -inset-5 rounded-[3rem] bg-gradient-to-br from-green-200/60 via-emerald-100/50 to-lime-200/60 blur-2xl dark:from-green-500/10 dark:via-transparent dark:to-lime-400/10" />
@@ -240,7 +249,6 @@ export default function Projects() {
                 {/* MAIN 3D CARD */}
 
                 <div className="relative overflow-hidden rounded-[2.5rem] border border-green-200 bg-gradient-to-br from-white via-green-50/80 to-emerald-100/90 p-7 shadow-[0_35px_80px_-25px_rgba(22,101,52,0.45)] dark:border-green-400/20 dark:from-white/[0.04] dark:via-white/[0.02] dark:to-green-950/50 dark:shadow-black/40 sm:p-9">
-
                   {/* TOP LIGHT REFLECTION */}
 
                   <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent dark:via-white/20" />
@@ -265,7 +273,6 @@ export default function Projects() {
                   <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-green-400/20 blur-3xl dark:bg-green-400/10" />
 
                   <div className="relative">
-
                     {/* ICON TILE */}
 
                     <motion.div
@@ -296,9 +303,7 @@ export default function Projects() {
                     </p>
 
                     <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-7">
-
                       <div className="rounded-2xl border border-green-200/80 bg-white/90 p-3.5 shadow-lg shadow-green-900/5 backdrop-blur dark:border-white/10 dark:bg-white/[0.04] sm:p-4">
-
                         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-700 text-white shadow-md shadow-green-600/30">
                           <CalendarDays size={17} />
                         </div>
@@ -310,11 +315,9 @@ export default function Projects() {
                         <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-500 sm:text-xs">
                           Established
                         </p>
-
                       </div>
 
                       <div className="rounded-2xl border border-green-200/80 bg-white/90 p-3.5 shadow-lg shadow-green-900/5 backdrop-blur dark:border-white/10 dark:bg-white/[0.04] sm:p-4">
-
                         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-700 text-white shadow-md shadow-green-600/30">
                           <Zap size={17} />
                         </div>
@@ -324,15 +327,11 @@ export default function Projects() {
                         </p>
 
                         <p className="mt-1 text-[11px] leading-4 text-gray-500 dark:text-gray-500 sm:text-xs">
-                          Years Combined Experience
+                          Years Domestic Experience
                         </p>
-
                       </div>
-
                     </div>
-
                   </div>
-
                 </div>
 
                 {/* FLOATING LEFT ACCENT */}
@@ -364,10 +363,8 @@ export default function Projects() {
                 >
                   <MapPin size={20} />
                 </motion.div>
-
               </div>
             </motion.div>
-
           </div>
         </div>
         <div className="h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
@@ -411,16 +408,19 @@ export default function Projects() {
               <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-500 dark:text-gray-400 sm:mt-6 sm:text-base">
                 WRELKIN supports renewable energy requirements through
                 engineering, procurement, construction, commissioning and
-                long-term technical support. Our experience includes
-                government organizations, Indian Railways, industrial clients
-                and private enterprises.
+                long-term technical support. Our experience includes government
+                organizations, Indian Railways, industrial clients and private
+                enterprises.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section id="project-areas" className="relative overflow-hidden bg-gray-50 py-16 dark:bg-[#031009] sm:py-20 lg:py-24">
+      <section
+        id="project-areas"
+        className="relative overflow-hidden bg-gray-50 py-16 dark:bg-[#031009] sm:py-20 lg:py-24"
+      >
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
@@ -429,7 +429,9 @@ export default function Projects() {
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">Project Areas</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">
+              Project Areas
+            </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-4xl lg:text-5xl">
               Renewable energy experience across multiple sectors.
             </h2>
@@ -441,7 +443,11 @@ export default function Projects() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {projectAreas.map((project, index) => (
-              <ProjectAreaCard key={project.number} project={project} index={index} />
+              <ProjectAreaCard
+                key={project.number}
+                project={project}
+                index={index}
+              />
             ))}
           </div>
         </div>
@@ -456,10 +462,14 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">Sector Experience</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">
+                Sector Experience
+              </p>
               <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-gray-950 dark:text-white sm:text-4xl lg:text-5xl">
                 Experience across{" "}
-                <span className="text-green-600 dark:text-green-400">demanding applications.</span>
+                <span className="text-green-600 dark:text-green-400">
+                  demanding applications.
+                </span>
               </h2>
               <p className="mt-5 max-w-md text-sm leading-7 text-gray-500 dark:text-gray-400 sm:text-base">
                 Our project understanding extends across public-sector,
@@ -469,10 +479,26 @@ export default function Projects() {
             </motion.div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <ExperienceCard icon={Building2} title="Government Organizations" text="Technical and engineering project support for government-sector renewable energy and infrastructure requirements." />
-              <ExperienceCard icon={HardHat} title="Indian Railways" text="Experience supporting railway-related applications including bio-toilet and technical infrastructure solutions." />
-              <ExperienceCard icon={Factory} title="Industrial Clients" text="Renewable energy, utility and process solutions for industrial project requirements." />
-              <ExperienceCard icon={Leaf} title="Private Enterprises" text="Project-specific engineering and EPC support for private-sector renewable energy initiatives." />
+              <ExperienceCard
+                icon={Landmark}
+                title="Government Organizations"
+                text="Technical and engineering project support for government-sector renewable energy and infrastructure requirements."
+              />
+              <ExperienceCard
+                icon={TrainFront}
+                title="Indian Railways"
+                text="Experience supporting railway-related applications including bio-toilet and technical infrastructure solutions."
+              />
+              <ExperienceCard
+                icon={Factory}
+                title="Industrial Clients"
+                text="Renewable energy, utility and process solutions for industrial project requirements."
+              />
+              <ExperienceCard
+                icon={Building2}
+                title="Private Enterprises"
+                text="Project-specific engineering and EPC support for private-sector renewable energy initiatives."
+              />
             </div>
           </div>
         </div>
@@ -487,15 +513,19 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">Our Approach</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">
+                Our Approach
+              </p>
               <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-gray-950 dark:text-white sm:text-4xl lg:text-5xl">
                 From concept to{" "}
-                <span className="text-green-600 dark:text-green-400">commissioning.</span>
+                <span className="text-green-600 dark:text-green-400">
+                  commissioning.
+                </span>
               </h2>
               <p className="mt-5 max-w-md text-sm leading-7 text-gray-500 dark:text-gray-400 sm:text-base">
-                Our integrated approach helps clients move from project
-                planning and engineering to procurement, installation,
-                commissioning and long-term technical support.
+                Our integrated approach helps clients move from project planning
+                and engineering to procurement, installation, commissioning and
+                long-term technical support.
               </p>
             </motion.div>
 
@@ -523,9 +553,16 @@ export default function Projects() {
                   whileHover={{ y: -5 }}
                   className="rounded-[1.5rem] border border-gray-200 bg-gray-50 p-6 shadow-sm transition-all duration-300 hover:border-green-300 hover:shadow-lg dark:border-white/10 dark:bg-white/[0.025]"
                 >
-                  <Icon size={21} className="text-green-600 dark:text-green-400" />
-                  <p className="mt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.value}</p>
-                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{item.label}</p>
+                  <Icon
+                    size={21}
+                    className="text-green-600 dark:text-green-400"
+                  />
+                  <p className="mt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {item.value}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    {item.label}
+                  </p>
                 </motion.div>
               );
             })}
@@ -548,7 +585,9 @@ export default function Projects() {
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 text-white shadow-lg shadow-green-600/20 dark:bg-green-500">
               <Zap size={24} />
             </div>
-            <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">Start a Conversation</p>
+            <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-green-600 dark:text-green-400">
+              Start a Conversation
+            </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-4xl lg:text-5xl">
               Have a renewable energy project in mind?
             </h2>
@@ -565,7 +604,10 @@ export default function Projects() {
                   className="group inline-flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-green-600/20 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 sm:px-7 sm:py-3.5"
                 >
                   Discuss Your Project
-                  <ArrowRight size={17} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight
+                    size={17}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
                 </motion.span>
               </Link>
             </div>
@@ -590,17 +632,28 @@ function ProjectAreaCard({ project, index }) {
       <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-green-400/10 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div className="relative">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-bold tracking-[0.2em] text-green-600 dark:text-green-400">{project.number}</span>
+          <span className="text-xs font-bold tracking-[0.2em] text-green-600 dark:text-green-400">
+            {project.number}
+          </span>
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-50 text-green-600 transition-transform duration-300 group-hover:scale-110 dark:bg-green-900/20 dark:text-green-400">
             <Icon size={22} strokeWidth={1.8} />
           </div>
         </div>
-        <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em] text-green-600 dark:text-green-400">{project.category}</p>
-        <h3 className="mt-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">{project.title}</h3>
-        <p className="mt-4 text-sm leading-7 text-gray-500 dark:text-gray-400">{project.description}</p>
+        <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em] text-green-600 dark:text-green-400">
+          {project.category}
+        </p>
+        <h3 className="mt-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
+          {project.title}
+        </h3>
+        <p className="mt-4 text-sm leading-7 text-gray-500 dark:text-gray-400">
+          {project.description}
+        </p>
         <div className="mt-6 space-y-2.5">
           {project.tags.map((tag) => (
-            <div key={tag} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <div
+              key={tag}
+              className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300"
+            >
               <CheckCircle2 size={15} className="shrink-0 text-green-500" />
               <span>{tag}</span>
             </div>
@@ -625,8 +678,12 @@ function ExperienceCard({ icon: Icon, title, text }) {
       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400">
         <Icon size={20} />
       </div>
-      <h3 className="mt-5 text-lg font-bold text-gray-900 dark:text-white">{title}</h3>
-      <p className="mt-2 text-sm leading-6 text-gray-500 dark:text-gray-400">{text}</p>
+      <h3 className="mt-5 text-lg font-bold text-gray-900 dark:text-white">
+        {title}
+      </h3>
+      <p className="mt-2 text-sm leading-6 text-gray-500 dark:text-gray-400">
+        {text}
+      </p>
     </motion.div>
   );
 }
@@ -644,8 +701,12 @@ function CapabilityCard({ item, index }) {
       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400">
         <Icon size={20} />
       </div>
-      <h3 className="mt-5 text-lg font-bold text-gray-900 dark:text-white">{item.title}</h3>
-      <p className="mt-2 text-sm leading-6 text-gray-500 dark:text-gray-400">{item.description}</p>
+      <h3 className="mt-5 text-lg font-bold text-gray-900 dark:text-white">
+        {item.title}
+      </h3>
+      <p className="mt-2 text-sm leading-6 text-gray-500 dark:text-gray-400">
+        {item.description}
+      </p>
     </motion.div>
   );
 }

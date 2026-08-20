@@ -16,11 +16,51 @@ import {
 
 import { Link } from "react-router-dom";
 
+import p6 from "../../assets/products/p6.png";
+
 import "./HeroSection.css";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#fafff7] transition-colors duration-700 dark:bg-[#04100a]">
+    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#f8fcf8] dark:bg-[#04100a]">
+      {/* =====================================================
+      BACKGROUND IMAGE
+  ===================================================== */}
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background Image */}
+        <img
+          src={p6}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover opacity-65 dark:opacity-30"
+        />
+
+        {/* Left overlay for text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f8fcf8]/95 via-[#f8fcf8]/70 to-transparent dark:from-[#04100a]/95 dark:via-[#04100a]/65 dark:to-transparent" />
+
+        {/* Top & Bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/35 dark:from-black/20 dark:to-black/45" />
+
+        {/* Soft green glow */}
+        <div className="absolute -left-40 top-10 h-[420px] w-[420px] rounded-full bg-emerald-300/15 blur-[120px] dark:bg-emerald-500/10" />
+
+        <div className="absolute -right-32 bottom-0 h-[380px] w-[380px] rounded-full bg-lime-300/10 blur-[120px] dark:bg-green-500/10" />
+
+        {/* Grid */}
+        <div
+          className="absolute inset-0 opacity-[0.04] dark:opacity-[0.05]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(22,163,74,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(22,163,74,.18) 1px, transparent 1px)",
+            backgroundSize: "70px 70px",
+            maskImage:
+              "radial-gradient(circle at center, black 45%, transparent 100%)",
+            WebkitMaskImage:
+              "radial-gradient(circle at center, black 45%, transparent 100%)",
+          }}
+        />
+      </div>
       {/* =====================================================
           AURORA AMBIENT BACKGROUND
       ===================================================== */}
@@ -79,7 +119,7 @@ export default function HeroSection() {
 
               <Recycle size={13} className="shrink-0 text-emerald-600" />
 
-              <span>BIOGAS • CLEAN ENERGY • SUSTAINABILITY</span>
+              <span>BIOGAS • GREEN ENERGY • SUSTAINABILITY</span>
             </motion.div>
             {/* =================================================
                 HEADING
@@ -175,7 +215,7 @@ export default function HeroSection() {
                 </motion.svg>
               </motion.span>
 
-              {/* Clean Energy */}
+              {/* Green Energy */}
 
               <motion.span
                 initial={{
@@ -194,7 +234,7 @@ export default function HeroSection() {
               >
                 into{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">clean energy.</span>
+                  <span className="relative z-10">Green energy.</span>
 
                   <motion.span
                     initial={{
@@ -242,8 +282,8 @@ export default function HeroSection() {
               <span className="font-semibold text-emerald-600 dark:text-emerald-400">
                 high-value, carbon-neutral energy
               </span>{" "}
-              — powering industries, farms, and communities toward a cleaner
-              tomorrow.
+              — powering industries, farms, and communities "Towards a Greener
+              Tomorrow".
             </motion.p>
 
             {/* =================================================
@@ -361,7 +401,7 @@ export default function HeroSection() {
 
               <ProcessArrow />
 
-              <ProcessItem icon={<Zap size={14} />} text="Clean Energy" />
+              <ProcessItem icon={<Zap size={14} />} text="Green Energy" />
             </motion.div>
           </div>
 

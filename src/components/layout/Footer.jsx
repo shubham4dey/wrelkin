@@ -4,11 +4,14 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  Building2,
   Mail,
   MapPin,
+  MessageCircle,
   Phone,
   Leaf,
   Factory,
+  Store,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -269,7 +272,7 @@ export default function Footer() {
                   lg:text-4xl
                 "
               >
-                Ready to build a cleaner{" "}
+                Ready to build a greener{" "}
                 <span className="text-green-600 dark:text-green-400">
                   tomorrow?
                 </span>
@@ -468,11 +471,20 @@ export default function Footer() {
 
             {/* Socials */}
             <div className="mt-7 flex items-center gap-3">
-              <SocialIcon icon={Facebook} href="#" label="Facebook" />
+              <SocialIcon
+                icon={Facebook}
+                href="https://www.facebook.com/profile.php?id=61590839822139"
+                label="Facebook"
+              />
 
-              <SocialIcon icon={Instagram} href="#" label="Instagram" />
+              {/* <SocialIcon icon={Instagram} href="#" label="Instagram" /> */}
 
               <SocialIcon icon={Linkedin} href="#" label="LinkedIn" />
+              <SocialIcon
+                icon={Store}
+                href="https://www.indiamart.com/wrelkin-industries-westbengal/"
+                label="IndiaMART"
+              />
             </div>
           </div>
 
@@ -512,25 +524,35 @@ export default function Footer() {
               CONTACT
           ====================================================== */}
 
-          <div>
-            <FooterTitle>Get In Touch</FooterTitle>
+         <div>
+  <FooterTitle>Get In Touch</FooterTitle>
 
-            <div className="space-y-5">
-              <ContactItem
-                icon={MapPin}
-                title="Factory Address"
-                text="Makardah Road, Kantalia, Domjur, West Bengal - 711409"
-              />
+  <div className="space-y-5">
+    <ContactItem
+      icon={MapPin}
+      title="Factory Address"
+      text="Makardah Road, Kantalia, Domjur, West Bengal - 711409"
+    />
 
-              <ContactItem icon={Phone} title="Phone" text="+91 XXXXX XXXXX" />
+    <ContactItem
+      icon={Phone}
+      title="Phone"
+      text="01169310316"
+    />
 
-              <ContactItem
-                icon={Mail}
-                title="Email"
-                text="wrelkinindustries@gmail.com"
-              />
-            </div>
-          </div>
+    <ContactItem
+      icon={MessageCircle}
+      title="WhatsApp"
+      text="+91 33356 50403"
+    />
+
+    <ContactItem
+      icon={Mail}
+      title="Email"
+      text="wrelkinindustries@gmail.com"
+    />
+  </div>
+</div>
         </div>
 
         {/* =====================================================
@@ -550,13 +572,13 @@ export default function Footer() {
             <MiniHighlight
               icon={Factory}
               title="10+ Years"
-              text="Combined Experience"
+              text="Domestic Experience"
               delay={0}
             />
 
             <MiniHighlight
               icon={Leaf}
-              title="Clean Energy"
+              title="Green Energy"
               text="Sustainable Solutions"
               delay={0.1}
             />
@@ -610,10 +632,7 @@ export default function Footer() {
             "
           />
 
-          <p>
-            © {new Date().getFullYear()} WRELKIN INDIA PRIVATE LIMITED. All
-            rights reserved.
-          </p>
+          <p>© 2023 – WRELKIN INDIA PRIVATE LIMITED. All rights reserved.</p>
 
           <div className="flex items-center gap-5">
             <Link

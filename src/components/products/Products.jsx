@@ -697,7 +697,7 @@ export default function Products() {
                         </p>
 
                         <p className="mt-1 text-xs text-gray-500 dark:text-gray-500">
-                          Years Combined Experience
+                          Years Domestic Experience
                         </p>
 
                       </div>

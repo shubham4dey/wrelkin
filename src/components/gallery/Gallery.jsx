@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Gallery images
 import g1 from "../../assets/g1.jpeg";
 import g2 from "../../assets/g2.jpeg";
 import g3 from "../../assets/g3.jpeg";
@@ -26,140 +27,210 @@ import g6 from "../../assets/g6.jpeg";
 import g7 from "../../assets/g7.jpeg";
 import g8 from "../../assets/g8.jpeg";
 
+// Additional product images (p1 - p13)
+import p1 from "../../assets/products/p1.png";
+import p2 from "../../assets/products/p2.png";
+import p3 from "../../assets/products/p3.png";
+import p4 from "../../assets/products/p4.png";
+import p5 from "../../assets/products/p5.png";
+import p6 from "../../assets/products/p6.png";
+import p7 from "../../assets/products/p7.png";
+import p8 from "../../assets/products/p8.png";
+import p9 from "../../assets/products/p9.png";
+import p10 from "../../assets/products/p10.png";
+import p11 from "../../assets/products/p11.png";
+import p12 from "../../assets/products/p12.png";
+import p13 from "../../assets/products/p13.png";
+
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedImage, setSelectedImage] = useState(null);
 
-  /*
-   * IMPORTANT:
-   * These are the image files currently available in the project.
-   * No unverified project/client/location claims are added.
-   */
-
   const galleryItems = [
-  {
-    id: 1,
-    category: "Bio-CNG / CBG",
-    title: "Bio-CNG Plant Entrance",
-    location: "Plant Premises",
-    image: g1,
-    size: "large",
-  },
+    // Bio-CNG / CBG Section
+    {
+      id: 1,
+      category: "Bio-CNG / CBG",
+      title: "Bio-CNG Plant Entrance",
+      location: "Plant Premises",
+      image: g1,
+      size: "large",
+    },
+    {
+      id: 2,
+      category: "Bio-CNG / CBG",
+      title: "Feedstock Processing Area",
+      location: "Plant Operations",
+      image: g2,
+      size: "normal",
+    },
+    {
+      id: 3,
+      category: "Bio-CNG / CBG",
+      title: "Process Pipeline Network",
+      location: "Engineering Section",
+      image: g3,
+      size: "normal",
+    },
+    {
+      id: 4,
+      category: "Bio-CNG / CBG",
+      title: "Bio-CNG Upgrading Unit",
+      location: "Gas Purification Area",
+      image: g4,
+      size: "large",
+    },
+    {
+      id: 5,
+      category: "Bio-CNG / CBG",
+      title: "Plant Utility Block",
+      location: "Utility & Control Section",
+      image: g5,
+      size: "normal",
+    },
+    {
+      id: 6,
+      category: "Bio-CNG / CBG",
+      title: "Bio-CNG Storage Tanks",
+      location: "Storage & Utility Area",
+      image: g6,
+      size: "normal",
+    },
+    {
+      id: 7,
+      category: "Bio-CNG / CBG",
+      title: "Gas Processing Vessels",
+      location: "Process Equipment Section",
+      image: g7,
+      size: "large",
+    },
+    {
+      id: 8,
+      category: "Bio-CNG / CBG",
+      title: "Plant Tank Farm",
+      location: "Bio-CNG Plant Overview",
+      image: g8,
+      size: "normal",
+    },
 
-  {
-    id: 2,
-    category: "Bio-CNG / CBG",
-    title: "Feedstock Processing Area",
-    location: "Plant Operations",
-    image: g2,
-    size: "normal",
-  },
+    // Biogas Plant Systems (p1 - p5)
+    {
+      id: 9,
+      category: "Biogas Systems",
+      title: "Anaerobic Digestion Plant",
+      location: "Biogas Facility",
+      image: p1,
+      size: "large",
+    },
+    {
+      id: 10,
+      category: "Biogas Systems",
+      title: "Biogas Processing Unit",
+      location: "Biogas Plant",
+      image: p2,
+      size: "normal",
+    },
+    {
+      id: 11,
+      category: "Biogas Systems",
+      title: "Gas Holder & Storage",
+      location: "Biogas Infrastructure",
+      image: p3,
+      size: "large",
+    },
+    {
+      id: 12,
+      category: "Biogas Systems",
+      title: "Slurry Management System",
+      location: "Biogas Plant",
+      image: p4,
+      size: "normal",
+    },
+    {
+      id: 13,
+      category: "Biogas Systems",
+      title: "Feedstock Preparation",
+      location: "Biogas Facility",
+      image: p5,
+      size: "normal",
+    },
 
-  {
-    id: 3,
-    category: "Bio-CNG / CBG",
-    title: "Process Pipeline Network",
-    location: "Engineering Section",
-    image: g3,
-    size: "normal",
-  },
+    // Renewable Infrastructure (p6 - p10)
+    {
+      id: 14,
+      category: "Project Execution",
+      title: "Industrial Plant Setup",
+      location: "Project Site",
+      image: p6,
+      size: "large",
+    },
+    {
+      id: 15,
+      category: "Project Execution",
+      title: "Engineering Installation",
+      location: "Project Execution",
+      image: p7,
+      size: "normal",
+    },
+    {
+      id: 16,
+      category: "Project Execution",
+      title: "Equipment Commissioning",
+      location: "Industrial Plant",
+      image: p8,
+      size: "large",
+    },
+    {
+      id: 17,
+      category: "Project Execution",
+      title: "Plant Infrastructure",
+      location: "Project Site",
+      image: p9,
+      size: "normal",
+    },
+    {
+      id: 18,
+      category: "Project Execution",
+      title: "Completed Facility",
+      location: "Renewable Energy Plant",
+      image: p10,
+      size: "normal",
+    },
 
-  {
-    id: 4,
-    category: "Bio-CNG / CBG",
-    title: "Bio-CNG Upgrading Unit",
-    location: "Gas Purification Area",
-    image: g4,
-    size: "large",
-  },
+    // Solar & Additional Systems (p11 - p13)
+    {
+      id: 19,
+      category: "Solar Power",
+      title: "Solar Array Installation",
+      location: "Solar Plant",
+      image: p11,
+      size: "large",
+    },
+    {
+      id: 20,
+      category: "Solar Power",
+      title: "Rooftop Solar System",
+      location: "Solar Installation",
+      image: p12,
+      size: "normal",
+    },
+    {
+      id: 21,
+      category: "Project Execution",
+      title: "Industrial Energy Setup",
+      location: "Project Facility",
+      image: p13,
+      size: "large",
+    },
+  ];
 
-  {
-    id: 5,
-    category: "Bio-CNG / CBG",
-    title: "Plant Utility Block",
-    location: "Utility & Control Section",
-    image: g5,
-    size: "normal",
-  },
-
-  {
-    id: 6,
-    category: "Bio-CNG / CBG",
-    title: "Bio-CNG Storage Tanks",
-    location: "Storage & Utility Area",
-    image: g6,
-    size: "normal",
-  },
-
-  {
-    id: 7,
-    category: "Bio-CNG / CBG",
-    title: "Gas Processing Vessels",
-    location: "Process Equipment Section",
-    image: g7,
-    size: "large",
-  },
-
-  {
-    id: 8,
-    category: "Bio-CNG / CBG",
-    title: "Plant Tank Farm",
-    location: "Bio-CNG Plant Overview",
-    image: g8,
-    size: "normal",
-  },
-
-  // Repeat images (different views)
-
-  {
-    id: 9,
-    category: "Project Execution",
-    title: "Bio-CNG Facility Overview",
-    location: "Project Execution Site",
-    image: g1,
-    size: "large",
-  },
-
-  {
-    id: 10,
-    category: "Project Execution",
-    title: "Storage Tank Installation",
-    location: "Plant Infrastructure",
-    image: g6,
-    size: "normal",
-  },
-
-  {
-    id: 11,
-    category: "Project Execution",
-    title: "Industrial Process Equipment",
-    location: "Engineering Works",
-    image: g7,
-    size: "normal",
-  },
-
-  {
-    id: 12,
-    category: "Project Execution",
-    title: "Renewable Energy Facility",
-    location: "Industrial Plant",
-    image: g8,
-    size: "large",
-  },
-];
-  /*
-   * Categories are aligned with WRELKIN's broader company capabilities.
-   *
-   * Some categories currently have no uploaded gallery image.
-   * They are still included so the gallery structure is ready
-   * when relevant photographs are added later.
-   */
-
-const filters = [
-  "All",
-  "Bio-CNG / CBG",
-  "Project Execution",
-];
+  const filters = [
+    "All",
+    "Bio-CNG / CBG",
+    "Biogas Systems",
+    "Project Execution",
+    "Solar Power",
+  ];
 
   const filteredItems =
     activeFilter === "All"
@@ -196,10 +267,6 @@ const filters = [
     setSelectedImage(filteredItems[nextIndex]);
   };
 
-  /*
-   * Keyboard navigation
-   */
-
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (!selectedImage) return;
@@ -223,10 +290,6 @@ const filters = [
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [selectedImage, currentIndex, filteredItems]);
-
-  /*
-   * Lock page scroll while lightbox is open
-   */
 
   useEffect(() => {
     if (selectedImage) {
@@ -309,7 +372,7 @@ const filters = [
               <h1 className="mt-5 max-w-4xl text-[2.7rem] font-semibold leading-[1.02] tracking-[-0.045em] text-gray-950 dark:text-white sm:mt-6 sm:text-5xl lg:mt-7 lg:text-[4.7rem]">
                 Engineering a{" "}
                 <span className="text-green-600 dark:text-green-400">
-                  cleaner energy
+                  greener energy
                 </span>{" "}
                 future.
               </h1>
@@ -317,7 +380,7 @@ const filters = [
               <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-600 dark:text-gray-300 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg">
                 Explore selected visuals representing WRELKIN's renewable energy
                 infrastructure, engineering capabilities, plant systems and
-                project execution across multiple clean energy applications.
+                project execution across multiple green energy applications.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
@@ -400,34 +463,18 @@ const filters = [
                     <span className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-lime-400 shadow-md shadow-lime-400/50" />
                   </motion.div>
 
-                  {/* CENTER TILE */}
+                  {/* =====================================================
+                      CENTER IMAGE — ORBIT CIRCLE KE BARABAR BADA (SAME AS SERVICES)
+                  ====================================================== */}
 
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-
-                    <motion.div
-                      animate={{
-                        y: [0, -8, 0],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                      className="relative flex h-28 w-28 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-green-500 via-green-600 to-emerald-700 text-white shadow-2xl shadow-green-600/40 ring-1 ring-white/40 dark:shadow-green-500/20 sm:h-32 sm:w-32 sm:rounded-[2rem]"
-                    >
-                      <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.4),transparent_55%)]" />
-
-                      <Images
-                        size={50}
-                        strokeWidth={1.4}
-                        className="relative sm:h-[54px] sm:w-[54px]"
+                  <div className="absolute inset-11 sm:inset-14">
+                    <div className="h-full w-full overflow-hidden rounded-full border-4 border-white shadow-2xl shadow-green-900/30 ring-1 ring-green-200 dark:border-white/20 dark:ring-green-800/40">
+                      <img
+                        src={p6}
+                        alt="Biogas Plant"
+                        className="h-full w-full object-cover"
                       />
-                    </motion.div>
-
-                    {/* FLOATING SHADOW UNDER TILE */}
-
-                    <div className="mx-auto mt-5 h-3.5 w-24 rounded-full bg-green-900/25 blur-[6px] dark:bg-black/60" />
-
+                    </div>
                   </div>
 
                   {/* CORNER TILE — LEAF */}
@@ -833,7 +880,7 @@ const filters = [
             {[
               {
                 icon: Images,
-                value: "09",
+                value: "21",
                 label: "Gallery Visuals",
               },
               {
@@ -849,7 +896,7 @@ const filters = [
               {
                 icon: Zap,
                 value: "10+",
-                label: "Years Combined Experience",
+                label: "Years Domestic Experience",
               },
             ].map((item, index) => {
               const Icon = item.icon;

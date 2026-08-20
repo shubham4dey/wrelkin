@@ -19,7 +19,8 @@ const testimonials = [
     category: "Project Collaboration",
     title: "Engineering with a purpose",
     text: "WRELKIN focuses on practical renewable energy solutions that connect engineering, sustainability and long-term project performance.",
-    rating: 5,
+    // rating: 5,
+    rating: "Pending",
     author: "Project Director",
     company: "Infrastructure Partner",
   },
@@ -78,7 +79,7 @@ export default function Testimonials() {
       setDirection(index > current ? 1 : -1);
       setCurrent(index);
     },
-    [current]
+    [current],
   );
 
   const nextSlide = useCallback(() => {
@@ -91,7 +92,7 @@ export default function Testimonials() {
     setDirection(-1);
 
     setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   }, []);
 
@@ -237,8 +238,8 @@ export default function Testimonials() {
             </motion.div>
 
             <p className="mt-5 max-w-sm text-sm leading-6 text-gray-500 dark:text-gray-400">
-              Creating lasting value through dependable engineering,
-              sustainable technology and customer-focused project execution.
+              Creating lasting value through dependable engineering, sustainable
+              technology and customer-focused project execution.
             </p>
           </motion.div>
 
@@ -252,10 +253,7 @@ export default function Testimonials() {
             }}
           >
             <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-gray-950 dark:text-white sm:text-5xl lg:text-6xl">
-              <SplitText
-                text="Relationships built on"
-                delay={0.1}
-              />
+              <SplitText text="Relationships built on" delay={0.1} />
 
               <span className="relative inline-block text-green-600 dark:text-green-400">
                 <motion.span
@@ -300,11 +298,7 @@ export default function Testimonials() {
             {/* Animated Border */}
             <motion.div
               animate={{
-                backgroundPosition: [
-                  "0% 50%",
-                  "100% 50%",
-                  "0% 50%",
-                ],
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{
                 duration: 8,
@@ -350,9 +344,7 @@ export default function Testimonials() {
                   {String(current + 1).padStart(2, "0")}
                 </span>
 
-                <span className="text-xs text-green-200/50">
-                  /
-                </span>
+                <span className="text-xs text-green-200/50">/</span>
 
                 <span className="text-sm text-green-200/60">
                   {String(testimonials.length).padStart(2, "0")}
@@ -365,10 +357,7 @@ export default function Testimonials() {
             ================================================== */}
 
             <div className="relative z-10 mt-10 min-h-[300px] overflow-hidden">
-              <AnimatePresence
-                mode="wait"
-                custom={direction}
-              >
+              <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={current}
                   custom={direction}
@@ -407,7 +396,7 @@ export default function Testimonials() {
                   </p>
 
                   {/* Stars */}
-                  <div className="mt-6 flex items-center gap-1">
+                  {/* <div className="mt-6 flex items-center gap-1">
                     {[...Array(testimonials[current].rating)].map(
                       (_, index) => (
                         <motion.div
@@ -433,6 +422,24 @@ export default function Testimonials() {
                         </motion.div>
                       )
                     )}
+                  </div> */}
+                  
+                  {/* Status Badge */}
+                  <div className="mt-6">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                      className="inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-lime-400/15 px-4 py-1.5"
+                    >
+                      <div className="relative flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-75" />
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-lime-400" />
+                      </div>
+                      <span className="text-xs font-bold uppercase tracking-[0.15em] text-lime-300">
+                        {testimonials[current].status || "Pending"}
+                      </span>
+                    </motion.div>
                   </div>
 
                   {/* Author */}
@@ -468,9 +475,7 @@ export default function Testimonials() {
                     width: isPlaying ? "100%" : "0%",
                   }}
                   transition={{
-                    duration: isPlaying
-                      ? SLIDE_DURATION / 1000
-                      : 0.2,
+                    duration: isPlaying ? SLIDE_DURATION / 1000 : 0.2,
                     ease: "linear",
                   }}
                   className="h-full rounded-full bg-gradient-to-r from-lime-300 to-emerald-400"
@@ -525,11 +530,7 @@ export default function Testimonials() {
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10"
                   aria-label={isPlaying ? "Pause" : "Play"}
                 >
-                  {isPlaying ? (
-                    <Pause size={16} />
-                  ) : (
-                    <Play size={16} />
-                  )}
+                  {isPlaying ? <Pause size={16} /> : <Play size={16} />}
                 </motion.button>
 
                 <motion.button
@@ -605,17 +606,15 @@ export default function Testimonials() {
           className="mt-10 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-gray-50 py-5 dark:border-white/10 dark:bg-white/[0.025]"
         >
           <div className="flex animate-marquee whitespace-nowrap">
-            {[...marqueeQuotes, ...marqueeQuotes].map(
-              (quote, index) => (
-                <div
-                  key={`${quote}-${index}`}
-                  className="mx-6 flex items-center gap-3 text-sm font-medium text-gray-600 dark:text-gray-300"
-                >
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-500" />
-                  {quote}
-                </div>
-              )
-            )}
+            {[...marqueeQuotes, ...marqueeQuotes].map((quote, index) => (
+              <div
+                key={`${quote}-${index}`}
+                className="mx-6 flex items-center gap-3 text-sm font-medium text-gray-600 dark:text-gray-300"
+              >
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-500" />
+                {quote}
+              </div>
+            ))}
           </div>
         </motion.div>
 
@@ -635,11 +634,7 @@ export default function Testimonials() {
           {/* Gradient Border */}
           <motion.div
             animate={{
-              backgroundPosition: [
-                "0% 50%",
-                "100% 50%",
-                "0% 50%",
-              ],
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
             transition={{
               duration: 8,
@@ -692,9 +687,7 @@ export default function Testimonials() {
                   }}
                 />
 
-                <span className="relative z-10">
-                  Discuss Your Project
-                </span>
+                <span className="relative z-10">Discuss Your Project</span>
 
                 <ArrowRight
                   size={17}
@@ -782,12 +775,7 @@ function SplitText({ text, delay = 0 }) {
    TRUST STAT
 ========================================================= */
 
-function TrustStat({
-  icon: Icon,
-  value,
-  label,
-  delay,
-}) {
+function TrustStat({ icon: Icon, value, label, delay }) {
   return (
     <motion.div
       initial={{
